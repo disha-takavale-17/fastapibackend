@@ -1,0 +1,59 @@
+frontend2
+
+client
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+*.log
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# FastAPI / Uvicorn
+*.db
+*.sqlite3
+*.sqlite
+*.pid
+
+# SQLAlchemy / Alembic
+alembic.ini
+# Keep migration scripts, ignore cache/compiled files
+alembic/versions/*.pyc
+alembic/versions/__pycache__/
+
+# Byte-compiled / cache
+*.cache
+*.coverage
+.coverage.*
+.cache/
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*
+*.env
+
+# Build / dist
+build/
+dist/
+*.egg-info/
