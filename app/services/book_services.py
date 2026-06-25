@@ -8,6 +8,14 @@ import random
 # Get all active books with ownership info
 def get_books_list(db, current_user):
     books = db.query(Book).filter(Book.is_active == True).all()
+    # sample_images =[
+    #     "https://picsum.photos/200/300?random=1",
+    #     "https://picsum.photos/200/300?random=2",
+    #     "https://picsum.photos/200/300?random=3",
+    #     "https://placekitten.com/200/300",
+    #     "https://dummyimage.com/200x300/000/fff&text=Book",
+    #     "https://picsum.photos/200/300?random=4",
+    # ]
     return [
         BookRead(
             id=book.id,
@@ -16,7 +24,8 @@ def get_books_list(db, current_user):
             published_year=book.published_year,
             is_active=book.is_active,
             user_id=book.user_id,
-            status="Mine" if book.user_id == current_user.id else "Available"
+            status="Mine" if book.user_id == current_user.id else "Available",
+            image_url=random.choice(sample_images)
         )
         for book in books
     ]

@@ -15,6 +15,7 @@ class BookRead(BaseModel):
     author: str
     published_year: int
     is_active: bool
-    user_id: int
+    user_id: Optional[int]
+    image_url: Optional[str]= None
 
     model_config = {"from_attributes": True}
